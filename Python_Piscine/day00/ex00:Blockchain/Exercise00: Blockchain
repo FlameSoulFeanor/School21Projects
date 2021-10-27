@@ -1,0 +1,27 @@
+Exercise00: Blockchain
+
+So, right now we don't know much about this blockchain's implementation, all we
+have is a file with some lines line shown above. But you may have already noticed
+a pattern - some lines are starting with several zeroes. So, let's write a Python
+script which will be able to receive a text file to its standard input, and then
+print out only those lines that start with exactly 5 zeroes.
+
+Keep in mind that the data has been corrupted, so you have to be very careful.
+That means, only lines that fit into certain criteria are considered valid:
+
+Correct lines are 32 characters long
+
+They start with exactly 5 zeroes, so e.g. line starting with 6 zeroes is NOT
+considered correct
+
+So, for the example above your script should print:
+
+00000254b208c0f43409d8dc00439896
+0000085a34260d1c84e89865c210ceb4
+0000071f49cffeaea4184be3d507086v
+
+Your code should accept the number of lines as an argument, like this:
+
+~$ cat data_hashes_10lines.txt | python blocks.py 10
+
+This way the program when stop when it processed 10 lines.
